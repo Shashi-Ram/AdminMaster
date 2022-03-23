@@ -1,6 +1,7 @@
 using AdminMaster.Models;
 using AdminMaster.Repository.Interface;
 using AdminMaster.Repository.Services;
+using AdminMaster.ViewModel;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -36,6 +37,7 @@ namespace AdminMaster
 
             //inject services
             services.AddTransient<IUsers,AccountService>();
+            services.AddTransient<GenericInterface<BookWithAuthorViewModel>, BookService>();
 
         }
 
