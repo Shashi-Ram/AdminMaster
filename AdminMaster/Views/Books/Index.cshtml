@@ -4,8 +4,10 @@
 }
 
 <script>
-        $(document).ready(function () {
-            $.get("")
+       $(document).ready(function () {
+            $.get('@Url.Action("GetData", "Books")', function (response) {
+
+            })
             })
         })
 </script>
